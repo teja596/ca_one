@@ -24,7 +24,6 @@ class Main:
         
         employee_work_data = self.read_data('data/hours.txt')
         self.compute(employees, employee_work_data)
-        
-        
+
 if __name__ == "__main__":
     Main().run()
