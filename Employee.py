@@ -24,13 +24,13 @@ class Employee:
         res['Regular Pay'] = res['Regular Hours Worked'] * res['Regular Rate']
         res['Overtime Pay'] = res['Overtime Hours Worked'] * res['Overtime Rate']
         res['Gross Pay'] = res['Regular Pay'] + res['Overtime Pay']
-        res['Standard Rate Pay'] = min(res['Gross Pay'], self.standard_rate)
-        res['Higher Rate Pay'] = min(res['Gross Pay'] - self.standard_rate, 0)
+        res['Standard Rate Pay'] = min(res['Gross Pay'], self.standardBand)
+        res['Higher Rate Pay'] = max(res['Gross Pay'] - self.standardBand, 0)
         res['Standard Tax'] = res['Standard Rate Pay'] * self.standard_rate
         res['Higher Tax'] = res['Higher Rate Pay'] * self.higher_rate
         res['Total Tax'] = res['Standard Tax'] + res['Higher Tax']
         res['Tax Credit'] = self.taxCredit
-        res['Net Deductions'] = res['Total Tax'] - res['Tax Credit']
+        res['Net Deductions'] = max(0, res['Total Tax'] - res['Tax Credit'])
         res['Net Pay'] = res['Gross Pay'] - res['Net Deductions']
 
         return res
