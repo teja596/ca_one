@@ -28,9 +28,4 @@ class EmployeeTest(unittest.TestCase):
         pi = e.computePayment(0, '31/10/2021')
         self.assertFalse(pi['Net Pay'] < 0)
 
-if __name__ == "__main__":
-    EmployeeTest().testNetLessEqualGross()
-    EmployeeTest().testOverTimeNotNeg()
-    EmployeeTest().testRegHourExceed()
-    EmployeeTest().testHighTaxNotNeg()
-    EmployeeTest().testNetPayNotNeg()
+unittest.main()
