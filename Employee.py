@@ -1,4 +1,6 @@
+#Create a class Employee
 class Employee:
+    #Craeating constructor with attributes staffId,lastName,firstName,reghours,hourlyRate,otMultiple,taxCredit,standardBand
     def __init__(self, staffId, lastName, firstName, regHours, hourlyRate, otMultiple, taxCredit, standardBand) -> None:
         self.staffId = staffId
         self.lastName = lastName
@@ -12,8 +14,9 @@ class Employee:
         self.standard_rate = 0.2
         self.higher_rate = 0.4
 
+           #Create a method computePayment having arguements hoursWorked and date and storing it as dictionary and returning it res as dictionary
     def computePayment(self, hoursWorked, date) -> dict:
-        res = {}
+        res = {}            #We are using an empty dictionary variable res 
         
         res['name'] = self.firstName + ' ' + self.lastName
         res['Date'] = date
@@ -33,4 +36,4 @@ class Employee:
         res['Net Deductions'] = max(0, res['Total Tax'] - res['Tax Credit'])
         res['Net Pay'] = res['Gross Pay'] - res['Net Deductions']
 
-        return res
+        return res  #used to return res for computePayment method as dictionary(res)
