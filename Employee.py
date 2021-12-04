@@ -1,3 +1,5 @@
+#Github link is https://github.com/teja596/ca_one.git
+
 #Create a class Employee
 class Employee:
     #Craeating constructor with attributes staffId,lastName,firstName,reghours,hourlyRate,otMultiple,taxCredit,standardBand
