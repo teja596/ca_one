@@ -6,4 +6,4 @@
 #I created another file EmployeeTest.py
 # EmployeeTest file consist of the testing methods 
 #I'll be adding more test cases in the EmployeeTest.py file
-#As we need to add the test cases in the given question I'll be copying the EmployeeTest methods to the main.py and lastly main.py is the required problem solution
+#As we need to add the test cases in the given question I'll be copying the EmployeeTest methods to the main.py and lastly main.py is the required problem solution where we also combine Employee.py code into main.py
